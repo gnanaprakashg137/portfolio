@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Chatbot Project | Gnanaprakash G</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO -->
+<meta name="description" content="AI Chatbot project built using Python, NLP, Flask and Dialogflow. Responsive UI, fullscreen image viewer, detailed step-by-step workflow, project aim and conclusion.">
+<meta name="keywords" content="AI Chatbot, NLP Project, Flask AI, Dialogflow Chatbot, AI Portfolio, Gnanaprakash">
+<meta name="author" content="Gnanaprakash G">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yourdomain.com/ai-chatbot.html">
+
+<!-- OpenGraph -->
+<meta property="og:title" content="AI Chatbot Project | Gnanaprakash G">
+<meta property="og:description" content="A professional AI Chatbot project using NLP, Flask & Dialogflow with responsive UI, workflow, and project aim & conclusion.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourdomain.com/ai-chatbot.html">
+<meta property="og:image" content="https://yourdomain.com/images/ai_project_1.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Chatbot Project">
+<meta name="twitter:description" content="AI Chatbot built using Python, NLP, Flask and Dialogflow.">
+<meta name="twitter:image" content="https://yourdomain.com/images/ai_project_1.png">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+<!--manifest-->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2563eb">
+
+<style>
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:#f8fafc;
+  color:#0f172a;
+}
+header{
+  position: fixed;       /* Fixed at top */
+  top: 0;
+  left: 0;
+  width: 100%;           /* Full width */
+  background:#0f172a;
+  color:#fff;
+  padding:10px;
+  text-align:center;
+  z-index:1000;          /* Stay above all content */
+}
+footer{
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+  color:#94a3b8;
+  background:#0f172a;
+}
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:100px 20px 20px 20px; /* Top padding = header height + some spacing */
+}
+h1{ margin-bottom:5px; font-size:clamp(24px,4vw,32px); }
+h4{ margin-top:0; color:#2563eb; }
+
+/* Slider */
+.slider{
+  overflow:hidden;
+  border-radius:20px;
+  margin:25px 0;
+  position:relative;
+  background:#f1f5f9;
+  padding:10px 0;
+}
+.slider-track{
+  display:flex;
+  transition: transform 0.2s linear;
+}
+.slider-track img{
+  width:320px;
+  max-width:80vw;
+  margin-right:16px;
+  border-radius:15px;
+  cursor:pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.slider-track img:hover{
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(37,99,235,0.3);
+}
+
+/* Details */
+.details{
+  background:rgba(255,255,255,0.85);
+  backdrop-filter:blur(16px);
+  padding:25px;
+  border-radius:22px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* Workflow paragraphs */
+.workflow-step{
+  margin-bottom:18px;
+  line-height:1.6;
+}
+.workflow-step span{ font-weight:600; color:#2563eb; }
+
+/* Team */
+.team-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  margin-top:20px;
+}
+.member-details{
+  background:#e2e8f0;
+  padding:20px;
+  border-radius:18px;
+  text-align:center;
+  transition: .3s ease-in-out;
+}
+.member-details:hover{
+  box-shadow: 1px 1px 10px #2563eb;
+  transform: scale(1.05);
+}
+.member-details h6{
+  font-size: 14px;
+  text-align: left;
+}
+.member img{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:12px;
+  transition: .3s ease-in-out;
+}
+.member span{
+  color:#2563eb;
+  font-weight:600;
+}
+
+/* Back button */
+.back-btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:12px 26px;
+  background:#2563eb;
+  color:white;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* Fullscreen Viewer */
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.95);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+}
+.lightbox img{
+  max-width:95%;
+  max-height:90%;
+  border-radius:12px;
+}
+.close-btn{
+  position:absolute;
+  top:15px;
+  right:20px;
+  font-size:32px;
+  color:white;
+  cursor:pointer;
+}
+.nav-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:38px;
+  color:white;
+  cursor:pointer;
+  padding:10px;
+}
+.prev{ left:10px; }
+.next{ right:10px; }
+
+@media(max-width:600px){
+  header h2{ font-size:18px; }
+  .slider-track img{ width:260px; }
+}
+</style>
+</head>
+<body>
+
+<header><h2>AI Chatbot Project</h2></header>
+
+<div class="container">
+<h1>AI Chatbot</h1>
+<h4>Tools Used: Python, NLP, Flask, Dialogflow</h4>
+
+<!-- Slider -->
+<div class="slider" id="slider">
+  <div class="slider-track" id="sliderTrack"></div>
+</div>
+
+  <div class="details">
+    <h3>Project Summary</h3>
+    <p>
+      This AI Chatbot project was developed to provide intelligent, real-time responses to user queries using AI. It understands natural language input and responds in a meaningful, user-friendly way. Python handles core programming, NLP processes user messages, Flask manages backend operations, and Dialogflow manages conversational flow.
+    </p>
+
+    <h3>Team Members</h3>
+    <div class="team-grid">
+      <div class="member-details">
+        <div class="member">
+          <img src="images/My photo.jpeg" loading="lazy" alt="Gnanaprakash G">
+          <h6><span>Name:</span> Gnanaprakash G</h6>
+          <h6><span>Role:</span> Lead AI Developer & Data Analyst</h6>
+          <h6><span>Position:</span> Team Leader</h6>
+          <h6><span>Contact:</span> +91 73970 01317</h6>
+        </div>
+      </div>
+      <div class="member-details">
+        <div class="member">
+          <img src="images/user.webp" loading="lazy" alt="Alice">
+          <h6><span>Name:</span> Alice</h6>
+          <h6><span>Role:</span> NLP & Flask Developer</h6>
+          <h6><span>Position:</span> Team Member</h6>
+          <h6><span>Contact:</span> +91 12345 67890</h6>
+        </div>
+      </div>
+      <div class="member-details">
+        <div class="member">
+          <img src="images/user.webp" loading="lazy" alt="Bob">
+          <h6><span>Name:</span> Bob</h6>
+          <h6><span>Role:</span> Dialogflow Integration</h6>
+          <h6><span>Position:</span> Team Member</h6>
+          <h6><span>Contact:</span> +91 12345 67890</h6>
+        </div>
+      </div>
+    </div>
+
+    <h3>Project Aim</h3>
+    <p>
+      The aim of this AI Chatbot project was to develop an intelligent system capable of understanding natural language queries from users and providing accurate, real-time responses. The chatbot is designed to assist users efficiently, reducing the need for manual intervention. By using Python, NLP, Flask, and Dialogflow, the project demonstrates practical AI applications in improving user communication.
+    </p>
+
+    <h3>Step-by-Step Workflow</h3>
+    <ol>
+      <li class="workflow-step"><span>Requirement Analysis:</span> Defined project scope, features, and goals to ensure clarity for the team.</li>
+      <li class="workflow-step"><span>Dataset Preparation:</span> Alice collected and preprocessed data, creating intents and cleaning text for model training.</li>
+      <li class="workflow-step"><span>NLP & Model Training:</span> Alice trained the chatbot model, handling text preprocessing, intent classification, and validation.</li>
+      <li class="workflow-step"><span>Dialogflow Integration:</span> Bob configured the Dialogflow agent, imported intents, and set up responses and fallback scenarios.</li>
+      <li class="workflow-step"><span>Backend Setup:</span> Alice implemented Flask APIs to serve the chatbot and connect it to the frontend.</li>
+      <li class="workflow-step"><span>Frontend Development:</span> Collaborated with Alice to design responsive UI, slider, and fullscreen image viewer.</li>
+      <li class="workflow-step"><span>Testing:</span> Team tested chatbot accuracy, conversation flow, edge cases, and performance.</li>
+      <li class="workflow-step"><span>Deployment:</span> Deployed the chatbot online with mobile responsiveness and SSL enabled.</li>
+      <li class="workflow-step"><span>Documentation:</span> Prepared full documentation including summary, screenshots, workflow, and team roles for portfolio.</li>
+    </ol>
+
+    <h3>Final Conclusion</h3>
+    <p>
+      This AI Chatbot project successfully integrates machine learning, NLP, and web technologies to create a responsive and user-friendly conversational agent. It improves the efficiency of information retrieval, provides practical AI experience, and serves as a functional prototype for real-world applications such as customer support or educational platforms, demonstrating AI’s potential to automate and enhance human-computer interaction.
+    </p>
+
+  </div>
+
+  <a href="index.html" class="back-btn">Back to Portfolio</a>
+</div>
+
+<footer>© 2026 Gnanaprakash. All Rights Reserved.</footer>
+
+<!-- Fullscreen Viewer -->
+<div class="lightbox" id="viewer">
+  <span class="close-btn" onclick="closeViewer()">×</span>
+  <span class="nav-btn prev" onclick="prevImg()">❮</span>
+  <img id="viewer-img" alt="Project Screenshot">
+  <span class="nav-btn next" onclick="nextImg()">❯</span>
+</div>
+
+<script>
+const images = [
+  "images/ai_project_1.png",
+  "images/ai_project_2.png",
+  "images/ai_project_3.png"
+];
+
+const sliderTrack = document.getElementById("sliderTrack");
+
+// Add images dynamically
+images.forEach((src,i)=>{
+  const img=document.createElement("img");
+  img.src=src; img.alt=`AI Chatbot Screenshot ${i+1}`;
+  img.loading="lazy"; img.addEventListener("click",()=>openViewer(i));
+  sliderTrack.appendChild(img);
+});
+// Duplicate images for seamless scrolling
+images.forEach((src,i)=>{
+  const img=document.createElement("img");
+  img.src=src; img.alt=`AI Chatbot Screenshot ${i+1}`;
+  img.loading="lazy"; img.addEventListener("click",()=>openViewer(i));
+  sliderTrack.appendChild(img);
+});
+
+let offset=0;
+const speed=1; // pixels per frame
+let isPaused=false;
+
+const slider = document.getElementById("slider");
+slider.addEventListener("mouseenter", ()=> isPaused=true);
+slider.addEventListener("mouseleave", ()=> isPaused=false);
+
+function scrollSlider(){
+  if(!isPaused){
+    offset += speed; // right → left
+    const maxOffset = sliderTrack.scrollWidth/2; // half width due to duplication
+    if(offset >= maxOffset) offset=0;
+    sliderTrack.style.transform=`translateX(-${offset}px)`;
+  }
+  requestAnimationFrame(scrollSlider);
+}
+requestAnimationFrame(scrollSlider);
+
+// Fullscreen Viewer
+let currentIndex=0;
+const viewer=document.getElementById("viewer");
+const viewerImg=document.getElementById("viewer-img");
+function openViewer(i){currentIndex=i;viewer.style.display="flex";viewerImg.src=images[currentIndex];}
+function closeViewer(){viewer.style.display="none";}
+function nextImg(){currentIndex=(currentIndex+1)%images.length;viewerImg.src=images[currentIndex];}
+function prevImg(){currentIndex=(currentIndex-1+images.length)%images.length;viewerImg.src=images[currentIndex];}
+
+document.addEventListener("keydown", e=>{
+  if(viewer.style.display!=="flex") return;
+  if(e.key==="ArrowRight") nextImg();
+  if(e.key==="ArrowLeft") prevImg();
+  if(e.key==="Escape") closeViewer();
+});
+</script>
+
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/portfolio/service-worker.js");
+  });
+}
+</script>
+
+
+</body>
+</html>

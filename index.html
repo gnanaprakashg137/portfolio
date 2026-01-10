@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gnanaprakash G | Portfolio</title>
+
+<!-- VIEWPORT -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO META TAGS -->
+<meta name="description" content="Gnanaprakash G – AI & Data Science student. Portfolio showcasing skills in Machine Learning, Data Analysis, AI Chatbots, Python projects and modern web development.">
+<meta name="keywords" content="Gnanaprakash G, AI Portfolio, Data Science Portfolio, Machine Learning Projects, AI Chatbot, Python Developer, Data Analyst, B.Tech AI & DS">
+<meta name="author" content="Gnanaprakash G">
+<meta name="robots" content="index, follow">
+
+<!-- CANONICAL -->
+<link rel="canonical" href="https://gnanaprakashg137.github.io/portfolio/">
+
+<!-- OPEN GRAPH (Facebook, LinkedIn, WhatsApp) -->
+<meta property="og:title" content="Gnanaprakash G | AI & Data Science Portfolio">
+<meta property="og:description" content="Explore my AI, Machine Learning and Data Science projects, skills and resume.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gnanaprakashg137.github.io/portfolio/">
+<meta property="og:image" content="https://gnanaprakashg137.github.io/portfolio/images/portfolio-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- TWITTER CARD -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gnanaprakash G | AI & Data Science Portfolio">
+<meta name="twitter:description" content="AI & Data Science student specializing in ML, Data Analytics and AI systems.">
+<meta name="twitter:image" content="https://gnanaprakashg137.github.io/portfolio/images/portfolio-preview.png">
+
+<!-- FAVICON -->
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+<!-- GOOGLE ICONS -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+<!--manifest-->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2563eb">
+
+<style>
+/* GLOBAL */
+html {
+  scroll-behavior: smooth;
+}
+
+.material-symbols-outlined {
+  font-size: 24px;
+  color: #ff00a6;
+  vertical-align: middle;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* REVEAL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+header h2 {
+    margin: 0;
+    font-size: 22px;
+}
+header nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #334155;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+header nav a.active {
+  color: #2563eb;
+  font-weight: 600;
+}
+h2{
+    pointer-events: none;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 160px 30px 80px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+.hero img {
+  width: 198px; max-width: 90%;
+  height: 260px;
+  border-radius: 25px;
+  object-fit: cover;
+  box-shadow: 0 30px 80px rgba(37,99,235,0.25);
+}
+.hero-text {
+  max-width: 600px;
+}
+.hero-text h1 {
+  font-size: 38px;
+  margin: 0;
+  pointer-events: none;
+}
+.hero-text h4 {
+  font-size: 22px;
+  margin: 5px 0;
+  pointer-events: none;
+}
+.hero-text span { color: #2563eb; }
+.hero-text p { font-size: 16px; color: #475569; margin-top: 10px; }
+.hero-text a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 24px;
+  background: #2563eb;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: .3s ease-in-out;
+}
+.hero-text a:hover{
+  box-shadow: 1px 1px 20px #2563eb;
+  transform: scale(1.05);
+}
+.hero-text a .material-symbols-outlined{
+  color: #fff;
+  font-size: 20px;
+}
+
+/* SECTIONS */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+  scroll-margin-top: 120px;
+}
+
+/* GLASS STYLE */
+.glass {
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(16px);
+  border-radius: 25px;
+  padding: 40px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.08);
+}
+
+/* SKILLS */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+.skill {
+  padding: 15px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.8);
+  font-weight: 500;
+  text-align: center;
+  font-size: 14px;
+  filter: drop-shadow(1px 8px 15px silver);
+}
+
+/* PROJECTS */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.project {
+  background: rgba(255,255,255,0.8);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.project img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.project div {
+  padding: 15px;
+}
+
+/* VIEW DETAILS BUTTONS */
+.view-details-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 22px;
+  background: rgba(37, 99, 235, 0.85); /* glassy blue */
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+}
+
+.view-details-btn:hover {
+  background: #2563eb;
+  transform: translateY(-3px) scale(1.05);
+}
+.view-details-btn .material-symbols-outlined{
+  color: #fff;
+  font-size: 20px;
+}
+
+.view-details-btn:hover::after {
+  transform: translateX(5px);
+}
+.project {
+  background: rgba(255,255,255,0.8);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(37,99,235,0.25);
+}
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* CONTACT */
+.contact p {
+    font-size: 16px;
+    font-weight: lighter;
+    margin: 8px 0;
+    padding: 10px;
+}
+.contact p a{
+    color: #2563eb;
+    text-decoration: none;
+    cursor: pointer;
+}
+.contact p a:hover{
+    color: blue;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+  color: #94a3b8;
+  background: #0f172a;
+}
+
+/* FLOATING CONTACT BUTTONS */
+.floating-contact {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.3s ease;
+}
+.floating-contact.show { opacity: 1; pointer-events: auto; }
+.contact-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-btn img { width: 28px; height: 28px; }
+.contact-btn:hover { transform: scale(1.1); }
+.whatsapp-btn { background: #25d366; }
+.email-btn { background: #2563eb; }
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+  .hero { flex-direction: column; text-align: center; }
+  .hero-text h1 { font-size: 28px; }
+  .hero-text h4 { font-size: 18px; }
+  .hero-text p { font-size: 14px; }
+  .hero-text a { font-size: 14px; padding: 8px 20px; }
+  .skills { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+  .projects { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .view-details-btn {font-size: 14px;padding: 8px 18px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>Gnanaprakash G</h2>
+  <nav>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <img src="images/My photo.jpeg" alt="Gnanaprakash">
+  <div class="hero-text">
+    <h1>Gnanaprakash G <span>B.Tech.,</span></h1>
+    <h4><span>Artificial Intelligence & Data Science</span></h4>
+    <p>
+      AI & Data Science student focused on machine learning, data analytics and building intelligent systems with real-world impact.</p>
+    <a href="resume.pdf" target="_blank">Download Resume <span class="material-symbols-outlined">download</span></a>
+  </div>
+</div>
+
+<section id="skills" class="reveal">
+  <div class="glass">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">Python & Data Science</div>
+      <div class="skill">Machine Learning</div>
+      <div class="skill">Data Analysis</div>
+      <div class="skill">AI Tools</div>
+      <div class="skill">HTML, CSS & Firebase</div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="reveal">
+  <div class="glass">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <img src="images/ai_project.png" alt="AI Chatbot Project">
+        <div>
+          <h3>AI Chatbot</h3>
+          <p>Conversational AI chatbot using Python & NLP.</p>
+          <a href="project-ai-chatbot.html" class="view-details-btn">View Details <span class="material-symbols-outlined">arrow_forward</span></a>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="images/data_project.png" alt="Data Analysis Project">
+        <div>
+          <h3>Data Analysis Project</h3>
+          <p>Exploratory data analysis using Pandas & Matplotlib.</p>
+          <a href="#" class="view-details-btn">View Details <span class="material-symbols-outlined">arrow_forward</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="reveal">
+  <div class="glass contact">
+    <h2>Contact</h2>
+    <p><span class="material-symbols-outlined">phone</span>Phone: <a href="tel:+917339316684">+91 7339316684</a></p>
+    <p><span class="material-symbols-outlined">mail</span> E-mail: <a href="mailto:gnanaprakashg1312@gmail.com">gnanaprakashg1312@gmail.com</a></p>
+    <p><span class="material-symbols-outlined">code</span> GitHub: <a href="https://github.com/gnanaprakashg137">https://github.com/gnanaprakashg137</a></p>
+    <p><span class="material-symbols-outlined">link</span> LinkedIn: <a href="https://www.linkedin.com/in/gnanaprakash-g-131706g?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">www.linkedin.com/in/gnanaprakash-g-131706g</a></p>
+    <p><span class="material-symbols-outlined">photo_camera</span> Instagram: <a href="https://www.instagram.com/gnanaprakashg_131706?igsh=MWdhdWlyenY0cWgybg==">@gnanaprakashg_131706</a></p>
+  </div>
+</section>
+
+<footer>
+  &#169; 2026 Gnanaprakash. All Rights Reserved.
+</footer>
+
+<!-- Floating Contact Buttons -->
+<div class="floating-contact">
+  <a href="https://wa.me/917339316684?text=Hello%20Gnanaprakash,%20I%20saw%20your%20portfolio" target="_blank" class="contact-btn whatsapp-btn" aria-label="Chat on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+  <a href="mailto:gnanaprakashg1312@gmail.com" class="contact-btn email-btn" aria-label="Send Email">
+    <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email">
+  </a>
+</div>
+
+<script>
+// Section reveal
+const reveals = document.querySelectorAll(".reveal");
+function revealOnScroll() {
+  reveals.forEach(section => {
+    const windowHeight = window.innerHeight;
+    const elementTop = section.getBoundingClientRect().top;
+    if (elementTop < windowHeight - 100) {
+      section.classList.add("active");
+    }
+  });
+}
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+
+// Active nav highlight
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+function setActiveLink() {
+  let currentSection = "";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 150;
+    const sectionHeight = section.offsetHeight;
+    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+      currentSection = section.getAttribute("id");
+    }
+  });
+  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 5) {
+    currentSection = "contact";
+  }
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + currentSection) {
+      link.classList.add("active");
+    }
+  });
+}
+window.addEventListener("scroll", setActiveLink);
+setActiveLink();
+
+// Floating contact buttons show after scroll
+const floatingContact = document.querySelector(".floating-contact");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    floatingContact.classList.add("show");
+  } else {
+    floatingContact.classList.remove("show");
+  }
+});
+</script>
+
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/portfolio/service-worker.js");
+  });
+}
+</script>
+
+</body>
+</html>
