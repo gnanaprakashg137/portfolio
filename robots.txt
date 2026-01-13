@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gnanaprakashg137.github.io/portfolio/sitemap.xml

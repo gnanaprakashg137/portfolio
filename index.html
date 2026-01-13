@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gnanaprakash | Portfolio</title>
+
+<!-- VIEWPORT -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- GOOGLE VERIFICATION -->
+<meta name="google-site-verification" content="-Y3ET1MQHv4Fhz1QpmAILwTwMwzByjyJ4aOGYMA_uu4" />
+
+<!-- SEO META TAGS -->
+<meta name="description" content="Gnanaprakash G - AI & Data Science student. Portfolio showcasing skills in Machine Learning, Data Analysis, AI Chatbots, Python projects and modern web development.">
+<meta name="keywords" content="Gnanaprakash G, AI Portfolio, Data Science Portfolio, Machine Learning Projects, AI Chatbot, Python Developer, Data Analyst, B.Tech AI & DS">
+<meta name="author" content="Gnanaprakash G">
+<meta name="robots" content="index, follow">
+
+<!-- CANONICAL -->
+<link rel="canonical" href="https://gnanaprakashg137.github.io/portfolio/">
+
+<!-- OPEN GRAPH (Facebook, LinkedIn, WhatsApp) -->
+<meta property="og:title" content="Gnanaprakash G | AI & Data Science Portfolio">
+<meta property="og:description" content="Explore my AI, Machine Learning and Data Science projects, skills and resume.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gnanaprakashg137.github.io/portfolio/">
+<meta property="og:image" content="https://cdn.pixabay.com/photo/2018/05/28/09/32/technology-3435575_1280.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- TWITTER CARD -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gnanaprakash G | AI & Data Science Portfolio">
+<meta name="twitter:description" content="AI & Data Science student specializing in ML, Data Analytics and AI systems.">
+<meta name="twitter:image" content="https://cdn.pixabay.com/photo/2019/01/30/07/45/web-3963944_1280.jpg">
+
+<!-- FAVICON -->
+<link rel="icon" type="image/png" sizes="32x32" href="https://gnanaprakashg137.github.io/portfolio/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://gnanaprakashg137.github.io/portfolio/images/favicon-16x16.png">
+<link rel="apple-touch-icon" href="https://gnanaprakashg137.github.io/portfolio/images/apple-touch-icon.png">
+
+<!-- GOOGLE ICONS -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+<!--manifest-->
+<link rel="manifest" href="/portfolio/manifest.json">
+<meta name="theme-color" content="#2563eb">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<style>
+/* GLOBAL */
+html {
+  scroll-behavior: smooth;
+}
+
+.material-symbols-outlined {
+  font-size: 24px;
+  color: #ff00a6;
+  vertical-align: middle;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+}
+body.menu-open {
+  overflow: hidden;
+}
+
+/* REVEAL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+header h2 {
+    margin: 0;
+    font-size: 22px;
+}
+header nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #334155;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+header nav a.active {
+  color: #2563eb;
+  font-weight: 600;
+}
+h2{
+    pointer-events: none;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 160px 30px 80px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+.hero img {
+  width: 198px; max-width: 90%;
+  height: 260px;
+  border-radius: 25px;
+  object-fit: cover;
+  box-shadow: 0 30px 80px rgba(37,99,235,0.25);
+}
+.hero-text {
+  max-width: 600px;
+}
+.hero-text h1 {
+  font-size: 38px;
+  margin: 0;
+  pointer-events: none;
+}
+.hero-text h4 {
+  font-size: 22px;
+  margin: 5px 0;
+  pointer-events: none;
+}
+.hero-text span { color: #2563eb; }
+.hero-text p { font-size: 16px; color: #475569; margin-top: 10px; }
+.hero-text a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 24px;
+  background: #2563eb;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: .3s ease-in-out;
+}
+.hero-text a:hover{
+  box-shadow: 1px 1px 10px #2563eb;
+  transform: scale(1.05);
+}
+.hero-text a .material-symbols-outlined{
+  color: #fff;
+  font-size: 20px;
+}
+
+/* SECTIONS */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+  scroll-margin-top: 120px;
+}
+
+/* GLASS STYLE */
+.glass {
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(16px);
+  border-radius: 25px;
+  padding: 40px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.08);
+}
+
+/* SKILLS */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+.skill {
+  padding: 15px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.8);
+  font-weight: 500;
+  text-align: center;
+  font-size: 14px;
+  filter: drop-shadow(1px 8px 15px silver);
+}
+
+/* PROJECTS */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.project {
+  background: rgba(255,255,255,0.8);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.project img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.project div {
+  padding: 15px;
+}
+
+/* VIEW DETAILS BUTTONS */
+.view-details-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 22px;
+  background: rgba(37, 99, 235, 0.85); /* glassy blue */
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+}
+
+.view-details-btn:hover {
+  background: #2563eb;
+  transform: translateY(-3px) scale(1.05);
+}
+.view-details-btn .material-symbols-outlined{
+  color: #fff;
+  font-size: 20px;
+}
+
+.view-details-btn:hover::after {
+  transform: translateX(5px);
+}
+.project {
+  background: rgba(255,255,255,0.8);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(37,99,235,0.25);
+}
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* CONTACT */
+.contact p {
+    font-size: 16px;
+    font-weight: lighter;
+    margin: 8px 0;
+    padding: 10px;
+}
+.contact p a{
+    color: #2563eb;
+    text-decoration: none;
+    cursor: pointer;
+}
+.contact p a:hover{
+    color: blue;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+  color: #94a3b8;
+  background: #0f172a;
+}
+
+/* FLOATING CONTACT BUTTONS */
+.floating-contact {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.3s ease;
+}
+.floating-contact.show { opacity: 1; pointer-events: auto; }
+.contact-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-btn img { width: 28px; height: 28px; }
+.contact-btn:hover { transform: scale(1.1); }
+.whatsapp-btn { background: #25d366; }
+.email-btn { background: #2563eb;}
+
+/* MOBILE NAV */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 30px;
+  color: #2563eb;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+    header nav {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.98);
+    transition: 
+      opacity 0.35s ease,
+      transform 0.35s ease;
+  }
+
+  header nav.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  header nav.hide {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.98);
+  }
+
+  header nav {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 15px 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    width: min(60vW, 330px);
+    text-align: center;
+  }
+  header nav a{
+    border-radius: 10px;
+    padding: 10px;
+    transition: .4s ease;
+    background-color: #f8fafc;
+  }
+  header nav a:hover{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #2563eb;
+    color: #fff;
+  }
+
+  header nav.show {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  header nav a {
+    margin: 0;
+    font-size: 16px;
+  }
+  .hero {
+    padding: 130px 16px 50px;
+    gap: 25px;
+  }
+
+  .hero img {
+    width: 150px;
+    height: 200px;
+    border-radius: 22px;
+  }
+
+  .hero-text {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(14px);
+    padding: 22px;
+    border-radius: 24px;
+    box-shadow: 0 20px 45px rgba(37,99,235,0.18);
+  }
+
+  .hero-text h1 {
+    font-size: 24px;
+  }
+
+  .hero-text h4 {
+    font-size: 16px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .hero-text a {
+    width: 45%;
+    text-align: center;
+  }
+  .floating-contact { display: none;}
+  .skills {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .skill {
+    font-size: 13px;
+    padding: 12px;
+    border-radius: 30px;
+  }
+  .contact p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+  }
+  footer{
+    margin-top: 65px;
+  }
+  .project img {
+    height: 180px;
+  }
+
+  .project h3 {
+    font-size: 17px;
+  }
+
+  .project p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .view-details-btn {
+    width: 85%;
+    text-align: center;
+  }
+}
+
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(40px);
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(15px);
+  border-radius: 30px;
+  padding: 10px 22px;
+  display: flex;
+  gap: 25px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  z-index: 3000;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+/* SHOW ONLY WHEN PAGE END */
+.mobile-bottom-nav.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(-100px); /* same 70px feel */
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+  .hero { flex-direction: column; text-align: center; }
+  .hero-text h1 { font-size: 28px; }
+  .hero-text h4 { font-size: 18px; }
+  .hero-text p { font-size: 14px; }
+  .hero-text a { font-size: 14px; padding: 8px 20px; }
+  .skills { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+  .projects { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .view-details-btn {font-size: 14px;padding: 8px 18px;}
+  .floating-contact { display: none;}
+}
+
+/* Mobile only */
+@media (min-width: 769px) {
+  .mobile-bottom-nav {
+    display: none;
+  }
+}
+
+.mobile-bottom-nav a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #334155;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.mobile-bottom-nav span {
+  font-size: 22px;
+  color: #2563eb;
+}
+
+/* MENU ICON ROTATION */
+.menu-icon {
+  transition: transform 0.35s ease;
+}
+
+.menu-icon.rotate {
+  transform: rotate(180deg);
+}
+
+@keyframes bottomNavPop {
+  0% {
+    transform: translateX(-50%) translateY(0) scale(0.95);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-75px) scale(1.05);
+    box-shadow: 0 25px 50px rgba(37,99,235,0.25);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-70px) scale(1);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  }
+}
+
+.mobile-bottom-nav.animate {
+  animation: bottomNavPop 0.6s cubic-bezier(.34,1.56,.64,1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ========== FULL SCREEN LOADER ========== */
+#atom-loader {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    145deg,
+    #f8fafc 0%,
+    #f1f5f9 35%,
+    #caecfb 65%,
+    #98dcfa 85%,
+    #38bdf8 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* ========== ATOM CONTAINER ========== */
+.atom {
+  position: relative;
+  width: 160px;
+  height: 160px;
+}
+
+/* ========== ORBITS (NO OUTSIDE BUG) ========== */
+.atom span {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top: 2px solid #38bdf8;
+  animation: orbitSpin 2s linear infinite;
+  box-sizing: border-box;
+}
+
+/* Orbit 2 */
+.atom span:nth-child(2) {
+  transform: rotate(60deg);
+  border-top-color: #22d3ee; /* yellow */
+  animation-duration: 2.6s;
+}
+
+/* Orbit 3 */
+.atom span:nth-child(3) {
+  transform: rotate(120deg);
+  border-top-color: #a78bfa; /* yellow */
+  animation-duration: 3s;
+}
+
+/* ========== CENTER TEXT (PERFECT CENTER) ========== */
+.atom-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 1.25;
+  pointer-events: none;
+}
+
+/* MAIN TEXT */
+.atom-text strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #e80cad;
+}
+
+/* SUB TEXT */
+.atom-text small {
+  display: block;
+  margin-top: 2px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #174ee4;
+  opacity: 0.9;
+}
+
+/* ========== LOADING TEXT ========== */
+#atom-loader p {
+  margin-top: 18px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #0f172a;
+}
+
+/* ========== ANIMATION ========== */
+@keyframes orbitSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="atom-loader">
+  <div class="atom">
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <div class="atom-text">
+      <strong>GNANAPRAKASH</strong>
+      <small>Portfolio</small>
+    </div>
+  </div>
+  <p>Loading...</p>
+</div>
+
+<header>
+  <h2>Gnanaprakash G</h2>
+
+  <nav id="mainNav">
+    <a href="#hero" class="nav-link">Home</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#tools" class="nav-link">Tools</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </nav>
+
+  <span class="material-symbols-outlined menu-icon" id="menuToggle">menu</span>
+</header>
+
+
+<!-- HERO -->
+<div class="hero" id="hero">
+  <img 
+    src="images/My-photo.jpeg"
+    alt="Gnanaprakash_photo.jpeg"
+    loading="eager"
+  >
+  <div class="hero-text">
+    <h1>Gnanaprakash G <span>B.Tech.,</span></h1>
+    <h4>
+      <span>AI & Automation Engineering</span> <span>(</span> Aspiring <span>)</span>
+    </h4>
+    <p>
+      I am an AI & Data Science student focused on <b>Python-based automation</b>, 
+      <b>AI fundamentals</b>, and building small real-world solutions that reduce 
+      manual work. Currently exploring <b>AIOps concepts</b> and intelligent automation.
+    </p>
+    <a href="https://gnanaprakashg137.github.io/resume/" target="_blank" rel="noopener">
+      Download Resume 
+      <span class="material-symbols-outlined">download</span>
+    </a>
+  </div>
+</div>
+
+<!-- SKILLS -->
+<section id="skills" class="reveal">
+  <div class="glass">
+    <h2>Core Skills</h2>
+    <div class="skills">
+      <div class="skill">Python (Automation & Basics)</div>
+      <div class="skill">AI & Machine Learning Fundamentals</div>
+      <div class="skill">Data Analysis (Pandas, Matplotlib)</div>
+      <div class="skill">Problem Solving</div>
+      <div class="skill">HTML & CSS</div>
+      <div class="skill">JavaScript Basics</div>
+    </div>
+  </div>
+</section>
+
+<section class="reveal" id="tools">
+  <div class="glass">
+    <h2>Automation & Tools</h2>
+    <div class="skills">
+      <div class="skill">Python Automation Scripts</div>
+      <div class="skill">Zapier (Workflow Automation)</div>
+      <div class="skill">Google Forms Automation</div>
+      <div class="skill">Gmail Automation</div>
+      <div class="skill">Git & GitHub</div>
+      <div class="skill">OpenAI API (Concept Level)</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="reveal">
+  <div class="glass">
+    <h2>Projects</h2>
+    <div class="projects">
+
+      <div class="project">
+        <img 
+          src="https://cdn.pixabay.com/photo/2024/04/28/19/31/ai-chatbot-8726176_1280.png" 
+          alt="AI Chatbot Project"
+          loading="lazy"
+          style="width:100%; height:auto;"
+        >
+        <div>
+          <h3>AI Chatbot</h3>
+          <p>
+            Built a conversational AI chatbot using Python and basic NLP techniques
+            to automate user interactions and handle common queries.
+          </p>
+          <a href="project-ai-chatbot.html" class="view-details-btn" onclick="openProject(event)">
+            View Details 
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="project">
+        <img 
+          src="https://cdn.pixabay.com/photo/2025/05/04/17/18/business-man-9578719_1280.png" 
+          alt="Automation Log Analysis Project"
+          loading="lazy"
+          style="width:100%; height:auto;"
+        >
+        <div>
+          <h3>Automation Log Analysis</h3>
+          <p>
+            Analyzed system log files using Python to detect errors, patterns,
+            and recurring issues inspired by AIOps monitoring concepts.
+          </p>
+          <a href="project-automation-log-analysis.html" class="view-details-btn" onclick="openProject(event)">
+            View Details 
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="reveal">
+  <div class="glass contact">
+    <h2>Contact</h2>
+
+    <p>
+      <span class="material-symbols-outlined">phone</span>
+      <a href="tel:+917339316684">+91 7339316684</a>
+    </p>
+
+    <p>
+      <span class="material-symbols-outlined">mail</span>
+      <a href="mailto:gnanaprakashg1312@gmail.com">
+        gnanaprakashg1312@gmail.com
+      </a>
+    </p>
+
+    <p>
+      <span class="material-symbols-outlined">code</span>
+      <a href="https://github.com/gnanaprakashg137" target="_blank" rel="noopener">
+        GitHub
+      </a>
+    </p>
+
+    <p>
+      <span class="material-symbols-outlined">link</span>
+      <a href="https://www.linkedin.com/in/gnanaprakash-g-131706g" target="_blank" rel="noopener">
+        LinkedIn
+      </a>
+    </p>
+
+    <p>
+      <span class="material-symbols-outlined">photo_camera</span>
+      <a href="https://www.instagram.com/gnanaprakashg_131706" target="_blank" rel="noopener">
+        Instagram
+      </a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Gnanaprakash G. All Rights Reserved.
+</footer>
+
+<!-- FLOATING CONTACT -->
+<div class="floating-contact">
+  <a 
+    href="https://wa.me/917339316684?text=Hello%20Gnanaprakash" 
+    target="_blank"
+    class="contact-btn whatsapp-btn"
+    aria-label="Chat on WhatsApp"
+  >
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+
+<a 
+  href="mailto:gnanaprakashg1312@gmail.com" 
+  class="contact-btn email-btn"
+  aria-label="Send Email"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="#ffffff">
+    <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18c0 1.1.89 2 1.99 2H20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+  </svg>
+</a>
+
+</div>
+
+<div class="mobile-bottom-nav" aria-label="Mobile navigation">
+  <a href="#hero">
+    <span class="material-symbols-outlined">home</span>
+    Home
+  </a>
+  <a href="#skills">
+    <span class="material-symbols-outlined">psychology</span>
+    Skills
+  </a>
+  <a href="#tools">
+    <span class="material-symbols-outlined">design_services</span>
+    Tools
+  </a>
+  <a href="#projects">
+    <span class="material-symbols-outlined">code</span>
+    Projects
+  </a>
+  <a href="#contact">
+    <span class="material-symbols-outlined">call</span>
+    Contact
+  </a>
+</div>
+
+<!-- JS -->
+<script>
+// Section reveal
+const reveals = document.querySelectorAll(".reveal");
+function revealOnScroll() {
+  reveals.forEach(section => {
+    const windowHeight = window.innerHeight;
+    const elementTop = section.getBoundingClientRect().top;
+    if (elementTop < windowHeight - 100) {
+      section.classList.add("active");
+    }
+  });
+}
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+
+// Active nav highlight
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+function setActiveLink() {
+  let currentSection = "";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 150;
+    const sectionHeight = section.offsetHeight;
+    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+      currentSection = section.getAttribute("id");
+    }
+  });
+  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 5) {
+    currentSection = "contact";
+  }
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + currentSection) {
+      link.classList.add("active");
+    }
+  });
+}
+window.addEventListener("scroll", setActiveLink);
+setActiveLink();
+
+// Floating contact buttons show after scroll
+const floatingContact = document.querySelector(".floating-contact");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    floatingContact.classList.add("show");
+  } else {
+    floatingContact.classList.remove("show");
+  }
+});
+</script>
+
+<script>
+// Service Worker
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/portfolio/service-worker.js", {
+      scope: "/portfolio/"
+    });
+  });
+}
+</script>
+
+<script>
+let projectWindow;
+
+function openProject(e) {
+  e.preventDefault(); // Prevent normal navigation
+  const url = e.currentTarget.href;
+  
+  // Add a small delay for smooth feeling
+  setTimeout(() => {
+    projectWindow = window.open(url, "_blank");
+  }, 250); // 250ms delay (adjustable)
+}
+</script>
+
+<!-- -------Hide Code-------------- -->
+<script>
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.addEventListener("keydown", e => {
+  if (
+    e.key === "F12" ||
+    (e.ctrlKey && e.key.toLowerCase() === "u") ||
+    (e.ctrlKey && e.shiftKey && ["i", "j", "c"].includes(e.key.toLowerCase()))
+  ) {
+    e.preventDefault();
+  }
+});
+</script>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.getElementById("mainNav");
+
+menuToggle.addEventListener("click", () => {
+  const isOpen = mainNav.classList.contains("show");
+
+  if (!isOpen) {
+    mainNav.classList.add("show");
+    menuToggle.textContent = "close";   // ✕ icon
+    menuToggle.classList.add("rotate"); // rotate
+  } else {
+    smoothCloseMenu();
+  }
+});
+
+// Auto close menu when clicking link
+document.querySelectorAll(".nav-link").forEach(link => {
+  link.addEventListener("click", () => {
+    smoothCloseMenu();
+  });
+});
+</script>
+
+<script>
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+  if (
+    mainNav.classList.contains("show") &&
+    Math.abs(window.scrollY - lastScrollY) > 10
+  ) {
+    smoothCloseMenu();
+  }
+  lastScrollY = window.scrollY;
+});
+
+document.addEventListener("click", (e) => {
+  if (
+    mainNav.classList.contains("show") &&
+    !mainNav.contains(e.target) &&
+    !menuToggle.contains(e.target)
+  ) {
+    smoothCloseMenu();
+  }
+});
+</script>
+
+<script>
+function smoothCloseMenu() {
+  if (!mainNav.classList.contains("show")) return;
+
+  mainNav.classList.add("hide");
+  menuToggle.classList.remove("rotate");
+
+  setTimeout(() => {
+    mainNav.classList.remove("show", "hide");
+    menuToggle.textContent = "menu"; // ☰ icon
+  }, 350);
+}
+</script>
+
+<script>
+const mobileBottomNav = document.querySelector(".mobile-bottom-nav");
+let navShownOnce = false;
+
+window.addEventListener("scroll", () => {
+  const scrollPos = window.scrollY + window.innerHeight;
+  const pageHeight = document.documentElement.scrollHeight;
+
+  if (scrollPos >= pageHeight - 20) {
+    mobileBottomNav.classList.add("show");
+
+    if (!navShownOnce) {
+      mobileBottomNav.classList.add("animate");
+
+  // HAPTIC FEEDBACK (mobile only)
+  const isRealMobile =
+    navigator.vibrate &&
+    ("ontouchstart" in window) &&
+    window.matchMedia("(pointer: coarse)").matches;
+
+  if (isRealMobile) {
+    navigator.vibrate([20, 30, 20]);
+  }
+
+      navShownOnce = true;
+    }
+  } else {
+    mobileBottomNav.classList.remove("show");
+  }
+});
+</script>
+
+<script>
+window.addEventListener("load", () => {
+  const loader = document.getElementById("atom-loader");
+
+  setTimeout(() => {
+    loader.style.transition = "opacity 0.6s ease";
+    loader.style.opacity = "0";
+
+    setTimeout(() => loader.remove(), 700);
+  }, 1400);
+});
+</script>
+
+</body>
+</html>

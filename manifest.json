@@ -1,0 +1,21 @@
+{
+  "name": "Gnanaprakash | Portfolio",
+  "short_name": "Gnanaprakash",
+  "start_url": "/portfolio/index.html",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#2563eb",
+  "description": "AI & Data Science student portfolio showcasing projects, skills and resume.",
+  "icons": [
+    {
+      "src": "/portfolio/images/favicon-16x16.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/portfolio/images/favicon-32x32.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

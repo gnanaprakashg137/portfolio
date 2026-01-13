@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Automation Log Analysis | Gnanaprakash G</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#2563eb">
+
+<!-- SEO -->
+<meta name="description" content="Automation Log Analysis project using Python for detecting patterns, errors, and system issues inspired by AIOps concepts.">
+<meta name="keywords" content="Automation Log Analysis, AIOps Mini Project, Python Log Analysis, AI Portfolio, Gnanaprakash">
+<meta name="author" content="Gnanaprakash G">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://gnanaprakashg.github.io/portfolio/project-automation-log-analysis.html">
+
+<!-- OpenGraph -->
+<meta property="og:title" content="Automation Log Analysis | Gnanaprakash G">
+<meta property="og:description" content="Mini AIOps inspired Automation Log Analysis project using Python.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gnanaprakashg.github.io/portfolio/project-automation-log-analysis.html">
+<meta property="og:image" content="images/log_project_1.png">
+
+<!-- GOOGLE ICONS -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Automation Log Analysis Project">
+<meta name="twitter:description" content="Python-based Automation Log Analysis inspired by AIOps concepts.">
+<meta name="twitter:image" content="images/log_project_1.png">
+
+<link rel="icon" href="images/favicon-32x32.png">
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:#f8fafc;
+  color:#0f172a;
+}
+.material-symbols-outlined {
+  font-size: 24px;
+  color: #ffffff;
+  vertical-align: middle;
+}
+header{
+  position:fixed;
+  top:0;left:0;width:100%;
+  background:#0f172a;
+  color:#fff;
+  padding:10px;
+  text-align:center;
+  z-index:1000;
+}
+footer{
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+  color:#94a3b8;
+  background:#0f172a;
+}
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:100px 20px 20px;
+}
+h1{font-size:clamp(24px,4vw,32px)}
+h4{color:#2563eb}
+
+/* Slider */
+.slider{
+  overflow:hidden;
+  border-radius:20px;
+  margin:25px 0;
+  background:#f1f5f9;
+  padding:10px 0;
+}
+.slider-track{
+  display:flex;
+  transition:transform .2s linear;
+}
+.slider-track img{
+  width:320px;
+  max-width:80vw;
+  margin-right:16px;
+  border-radius:15px;
+  cursor:pointer;
+  transition:.3s;
+}
+.slider-track img:hover{
+  transform:scale(1.05);
+  box-shadow:0 5px 15px rgba(37,99,235,.3);
+}
+
+/* Details */
+.details{
+  background:rgba(255,255,255,.9);
+  padding:25px;
+  border-radius:22px;
+  box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+.workflow-step span{font-weight:600;color:#2563eb}
+
+/* Back button */
+.back-btn{
+  display:inline-block;
+  margin: 25px;
+  padding:12px 26px;
+  background:#2563eb;
+  color:#fff;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+
+.back-btn:hover {
+  background: #2563eb;
+  box-shadow: 1px 1px 10px #2563eb;
+  transform: translateY(-3px) scale(1.05);
+}
+.back-btn:hover::after {
+  transform: translateX(5px);
+}
+
+/* Lightbox */
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.95);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+}
+.lightbox img{
+  max-width:95%;
+  max-height:90%;
+  border-radius:12px;
+}
+.close-btn,.nav-btn{
+  position:absolute;
+  color:white;
+  font-size:32px;
+  cursor:pointer;
+}
+.close-btn{top:15px;right:20px}
+.prev{left:15px;top:50%}
+.next{right:15px;top:50%}
+
+/* ========== FULL SCREEN LOADER ========== */
+#atom-loader {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    145deg,
+    #f8fafc 0%,
+    #f1f5f9 35%,
+    #caecfb 65%,
+    #98dcfa 85%,
+    #38bdf8 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* ========== ATOM CONTAINER ========== */
+.atom {
+  position: relative;
+  width: 160px;
+  height: 160px;
+}
+
+/* ========== ORBITS (NO OUTSIDE BUG) ========== */
+.atom span {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top: 2px solid #38bdf8;
+  animation: orbitSpin 2s linear infinite;
+  box-sizing: border-box;
+}
+
+/* Orbit 2 */
+.atom span:nth-child(2) {
+  transform: rotate(60deg);
+  border-top-color: #22d3ee; /* yellow */
+  animation-duration: 2.6s;
+}
+
+/* Orbit 3 */
+.atom span:nth-child(3) {
+  transform: rotate(120deg);
+  border-top-color: #a78bfa; /* yellow */
+  animation-duration: 3s;
+}
+
+/* ========== CENTER TEXT (PERFECT CENTER) ========== */
+.atom-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 1.25;
+  pointer-events: none;
+}
+
+/* MAIN TEXT */
+.atom-text strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #e80cad;
+}
+
+/* SUB TEXT */
+.atom-text small {
+  display: block;
+  margin-top: 2px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #174ee4;
+  opacity: 0.9;
+}
+
+/* ========== LOADING TEXT ========== */
+#atom-loader p {
+  margin-top: 18px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #0f172a;
+}
+
+/* ========== ANIMATION ========== */
+@keyframes orbitSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div id="atom-loader">
+  <div class="atom">
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <div class="atom-text">
+      <strong>GNANAPRAKASH</strong>
+      <small>Project</small>
+    </div>
+  </div>
+  <p>Loading...</p>
+</div>
+
+<header><h2>Automation Log Analysis Project</h2></header>
+
+<div class="container">
+<h1>Automation Log Analysis (Mini AIOps)</h1>
+<h4>Tools Used: Python, Log Files, Data Analysis</h4>
+
+<p><em>This project was developed as an academic mini project inspired by AIOps fundamentals.</em></p>
+
+<div class="slider">
+  <div class="slider-track" id="sliderTrack"></div>
+</div>
+
+<div class="details">
+
+<h3>Project Summary</h3>
+<p>
+This Automation Log Analysis project focuses on analyzing system and application log files
+to identify recurring errors, unusual patterns, and operational issues.
+Using Python automation, logs are processed to extract meaningful insights that help
+in proactive system monitoring.
+</p>
+
+<h3>Project Aim</h3>
+<p>
+The aim of this project is to automate log analysis using Python, reduce manual monitoring effort,
+and introduce AIOps-style thinking for detecting system anomalies and patterns.
+</p>
+
+<h3>Step-by-Step Workflow</h3>
+<ol>
+<li class="workflow-step"><span>Log Collection:</span> Collected raw system and application log files.</li>
+<li class="workflow-step"><span>Preprocessing:</span> Cleaned logs by removing noise and irrelevant entries.</li>
+<li class="workflow-step"><span>Parsing:</span> Extracted timestamps, error levels, and messages.</li>
+<li class="workflow-step"><span>Pattern Detection:</span> Identified frequent errors and repeated events.</li>
+<li class="workflow-step"><span>Automation:</span> Automated analysis using Python scripts.</li>
+<li class="workflow-step"><span>Visualization:</span> Generated basic summaries and insights.</li>
+<li class="workflow-step"><span>Insights:</span> Interpreted patterns to suggest possible system improvements.</li>
+</ol>
+
+<h3>Final Conclusion</h3>
+<p>
+This project demonstrates how Python automation can simplify log analysis and
+introduce AIOps concepts at a beginner level.
+It provides a foundation for advanced monitoring, anomaly detection,
+and intelligent IT operations.
+</p>
+
+</div>
+
+<a href="#" onclick="backToPortfolio()" class="back-btn"><span class="material-symbols-outlined">arrow_back</span> Back to Portfolio</a>
+
+<footer>© 2026 Gnanaprakash G. All Rights Reserved.</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="viewer">
+  <span class="close-btn" onclick="closeViewer()">×</span>
+  <span class="nav-btn prev" onclick="prevImg()">❮</span>
+  <img id="viewer-img" alt="Automation Log Analysis Screenshot">
+  <span class="nav-btn next" onclick="nextImg()">❯</span>
+</div>
+
+<script>
+let startX=0,endX=0;
+const images=[
+"https://media.istockphoto.com/id/1315918172/vector/dashboard-ui-ux-kit-great-design-for-any-site-purposes-business-infographic-template-vector.jpg?s=612x612&w=0&k=20&c=mjC2rjp5dM-s-AdfQWcNMUciGTRSQgeFjlbxFk9b2L4=",
+"https://media.istockphoto.com/id/1480239160/photo/an-analyst-uses-a-computer-and-dashboard-for-data-business-analysis-and-data-management.jpg?s=612x612&w=0&k=20&c=Zng3q0-BD8rEl0r6ZYZY0fbt2AWO9q_gC8lSrwCIgdk=",
+"https://media.istockphoto.com/id/1488294044/photo/businessman-works-on-laptop-showing-business-analytics-dashboard-with-charts-metrics-and-kpi.jpg?s=612x612&w=0&k=20&c=AcxzQAe1LY4lGp0C6EQ6reI7ZkFC2ftS09yw_3BVkpk=",
+"https://media.istockphoto.com/id/1480239219/photo/an-analyst-uses-a-computer-and-dashboard-for-data-business-analysis-and-data-management.jpg?s=612x612&w=0&k=20&c=URv6HYZ8L3NCQnxT8-ITvInMW7mlsTE6EjnXHaqF-H4=",
+"https://media.istockphoto.com/id/1979289147/photo/data-analysis-science-and-big-data-with-ai-technology-analyst-or-scientist-uses-a-computer.jpg?s=612x612&w=0&k=20&c=vmC-jVG6PNPRQtgtBp2y1caApEGYjt-fDrm0VzRgvK8=",
+"https://media.istockphoto.com/id/1250153439/photo/businessman-using-tablet-analyzing-sales-data-and-economic-growth-graph-chart-on-virtual.jpg?s=612x612&w=0&k=20&c=NlXJMbc98GmyF7-FerVqJXaRiLj1MOBBonhmG-KRFfo="
+];
+const sliderTrack=document.getElementById("sliderTrack");
+images.concat(images).forEach((src,i)=>{
+  const img=document.createElement("img");
+  img.src=src;
+  img.alt=`Log Analysis Screenshot ${i+1}`;
+  img.onclick=()=>openViewer(i%images.length);
+  sliderTrack.appendChild(img);
+});
+
+let offset=0;
+function scroll(){
+  offset+=0.6;
+  if(offset>=sliderTrack.scrollWidth/2)offset=0;
+  sliderTrack.style.transform=`translateX(-${offset}px)`;
+  requestAnimationFrame(scroll);
+}
+scroll();
+
+let idx=0;
+const viewer=document.getElementById("viewer");
+const viewerImg=document.getElementById("viewer-img");
+
+function openViewer(i){idx=i;viewer.style.display="flex";viewerImg.src=images[idx]}
+function closeViewer(){viewer.style.display="none"}
+function nextImg(){idx=(idx+1)%images.length;viewerImg.src=images[idx]}
+function prevImg(){idx=(idx-1+images.length)%images.length;viewerImg.src=images[idx]}
+
+// Keyboard navigation + Escape
+document.addEventListener("keydown", e => {
+  if(e.key === "Escape") closeViewer();
+  else if(e.key === "ArrowRight") nextImg();
+  else if(e.key === "ArrowLeft") prevImg();
+});
+
+// Click outside image to close
+viewer.addEventListener("click", e => { if(e.target === viewer) closeViewer(); });
+
+// Swipe support
+viewer.addEventListener("touchstart", e => startX=e.touches[0].clientX);
+viewer.addEventListener("touchend", e => {
+  endX=e.changedTouches[0].clientX;
+  const diff=startX-endX;
+  if(Math.abs(diff)>50){ diff>0?nextImg():prevImg(); }
+});
+</script>
+
+<script>
+function backToPortfolio() {
+  if (window.opener) {  // Check if this tab was opened from main portfolio
+    window.close();      // Close current project tab
+    window.opener.focus(); // Focus back on portfolio tab
+  } else {
+    // Fallback: just go to portfolio if opened directly
+    window.location.href = "https://gnanaprakashg137.github.io/portfolio/";
+  }
+}
+</script>
+
+<!---------Hide Code---------------->
+<script>
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.addEventListener("keydown", e => {
+  if (
+    e.key === "F12" ||
+    (e.ctrlKey && e.key.toLowerCase() === "u") ||
+    (e.ctrlKey && e.shiftKey && ["i", "j", "c"].includes(e.key.toLowerCase()))
+  ) {
+    e.preventDefault();
+  }
+});
+</script>
+
+<script>
+window.addEventListener("load", () => {
+  const loader = document.getElementById("atom-loader");
+
+  setTimeout(() => {
+    loader.style.transition = "opacity 0.s ease";
+    loader.style.opacity = "0";
+
+    setTimeout(() => loader.remove(), 700);
+  }, 1400);
+});
+</script>
+
+</body>
+</html>
