@@ -2,12 +2,72 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Gnanaprakash G | Portfolio</title>
-<meta name="description" content="Gnanaprakash G - AI & Data Science student specializing in Python automation, AIOps, and intelligent systems."/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0"/>
+
+<!-- ── PRIMARY SEO ── -->
+<title>Gnanaprakash G | AI & Data Science Portfolio | Python Automation & AIOps</title>
+<meta name="description" content="Gnanaprakash G — B.Tech AI & Data Science student at ACET Coimbatore. Specializing in Python automation, AIOps, Machine Learning, and intelligent systems. Open to internships and collaborations."/>
+<meta name="keywords" content="Gnanaprakash, Gnanaprakash G, AI Data Science, Python Automation, AIOps, Machine Learning, Portfolio, ACET Coimbatore, B.Tech AI, Data Science Student, Web Developer, GitHub, Internship"/>
+<meta name="author" content="Gnanaprakash G"/>
+<meta name="robots" content="index, follow"/>
+<meta name="theme-color" content="#020817"/>
+<meta name="color-scheme" content="dark"/>
+<link rel="canonical" href="https://gnanaprakashg137.github.io/"/>
+
+<!-- ── OPEN GRAPH (Facebook, LinkedIn, WhatsApp) ── -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://gnanaprakashg137.github.io/"/>
+<meta property="og:title" content="Gnanaprakash G | AI & Data Science Portfolio"/>
+<meta property="og:description" content="B.Tech AI & Data Science student focused on Python automation, AIOps, and intelligent systems. Check out my projects and skills!"/>
+<meta property="og:image" content="https://gnanaprakashg137.github.io/My_photo.jpeg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:site_name" content="Gnanaprakash G Portfolio"/>
+<meta property="og:locale" content="en_IN"/>
+
+<!-- ── TWITTER CARD ── -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@prakash131706"/>
+<meta name="twitter:creator" content="@prakash131706"/>
+<meta name="twitter:title" content="Gnanaprakash G | AI & Data Science Portfolio"/>
+<meta name="twitter:description" content="B.Tech AI & Data Science student focused on Python automation, AIOps, and intelligent systems."/>
+<meta name="twitter:image" content="https://gnanaprakashg137.github.io/My_photo.jpeg"/>
+
+<!-- ── STRUCTURED DATA (JSON-LD) ── -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Gnanaprakash G",
+  "url":"https://gnanaprakashg137.github.io/",
+  "image":"https://gnanaprakashg137.github.io/My_photo.jpeg",
+  "jobTitle":"AI & Data Science Student",
+  "description":"B.Tech AI & Data Science student at ACET Coimbatore specializing in Python automation, AIOps, and Machine Learning.",
+  "email":"gnanaprakashg1312@gmail.com",
+  "sameAs":[
+    "https://www.linkedin.com/in/gnanaprakash-g-869296331/",
+    "https://github.com/gnanaprakashg137/",
+    "https://x.com/prakash131706",
+    "https://www.instagram.com/gnanaprakashg_131706"
+  ],
+  "alumniOf":{
+    "@type":"CollegeOrUniversity",
+    "name":"Asian College of Engineering and Technology",
+    "address":{"@type":"PostalAddress","addressLocality":"Coimbatore","addressRegion":"Tamil Nadu","addressCountry":"IN"}
+  },
+  "knowsAbout":["Python","Machine Learning","AIOps","Data Science","Automation","HTML","CSS","JavaScript","Git"]
+}
+</script>
+
+<!-- ── FAVICON ── -->
+<link rel="icon" type="image/png" sizes="32x32" href="img/G-32x32.png"/>
+<link rel="apple-touch-icon" href="img/G-32x32.png"/>
+
+<!-- ── FONTS & ICONS ── -->
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
-<link rel="icon" href="img/G-32x32.png">
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -131,7 +191,6 @@ nav{
 .nav-right{display:flex;align-items:center;gap:1rem;flex-shrink:0}
 .nav-status{display:flex;align-items:center;gap:.5rem;font-size:.7rem;color: red;font-family:var(--font-mono);white-space:nowrap}
 .nav-dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:blink 2s infinite;flex-shrink:0}
-.nav-dot-blue{width:6px;height:6px;background: var(--blue);border-radius:50%;animation:blink 1.5s infinite;flex-shrink:0}
 .nav-dot-red{width:6px;height:6px;background: red;border-radius:50%;animation:blink 2s infinite;flex-shrink:0}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 
@@ -207,8 +266,29 @@ nav{
 #hero{min-height:100vh;display:flex;align-items:center;padding-top:4rem;position:relative}
 @media(max-width:900px){#hero{min-height:unset;padding-top:5rem;padding-bottom:2.5rem;align-items:flex-start}}
 .hero-inner{display:grid;grid-template-columns:1fr 340px;gap:4rem;align-items:center;width:100%}
-.hero-tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.2);border-radius:100px;padding:.35rem 1rem;font-family:var(--font-mono);font-size:.7rem;color:var(--blue);letter-spacing:.06em;margin-bottom:1.5rem}
-.hero-tag-dot{width:5px;height:5px;background:var(--cyan);border-radius:50%;animation:blink 1.5s infinite}
+
+/* ── HERO TAG FIX ── */
+.hero-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  background:rgba(59,130,246,.08);
+  border:1px solid rgba(59,130,246,.2);
+  border-radius:100px;
+  padding:.35rem 1rem;
+  font-family:var(--font-mono);
+  font-size:.7rem;
+  color:var(--blue);
+  letter-spacing:.06em;
+  margin-bottom:1.5rem;
+  /* Allow wrapping on small screens */
+  white-space:normal;
+  word-break:keep-all;
+  max-width:100%;
+  flex-wrap:wrap;
+}
+.hero-tag-dot{width:5px;height:5px;background:var(--cyan);border-radius:50%;animation:blink 1.5s infinite;flex-shrink:0}
+
 .hero-title{font-size:clamp(2.5rem,5vw,4rem);font-weight:700;line-height:1.05;letter-spacing:-.03em;margin-bottom:1rem}
 .hero-title .t1{display:block;color:var(--text)}
 .hero-title .t2{display:block;background:linear-gradient(135deg,var(--blue),var(--cyan),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
@@ -506,13 +586,38 @@ footer span{color:var(--blue2)}
   .about-grid{grid-template-columns:1fr}
   .skills-grid{grid-template-columns:1fr}
   .proj-grid{grid-template-columns:1fr}
-  .edu-card{grid-template-columns:auto 1fr;gap:1rem}
-  .edu-badge{display:none}
+  .edu-card{grid-template-columns:auto 1fr;gap:1rem;flex-wrap:wrap}
+  .edu-badge{display:inline-block;margin-top:.5rem;font-size:.65rem;padding:.25rem .6rem}
+  .edu-card .edu-badge{grid-column:2}
   .cert-grid{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
   .fab-wrap{bottom:1.5rem;right:1.5rem}
   .nav-drawer-datetime-block{display:flex}
+  .wrapper{padding:0 1rem}
+  .sec-sub{font-size:.88rem}
+  .hero-sub{font-size:.92rem}
+  .contact-big{font-size:1.8rem}
+  /* Hero tag mobile fix */
+  .hero-tag{
+    display:inline-flex;
+    justify-content:center;
+    text-align:center;
+    font-size:.65rem;
+    padding:.3rem .85rem;
+    border-radius:12px;
+    letter-spacing:.03em;
+    line-height:1.5;
+  }
+}
+
+/* ── TABLET (600–900px) ── */
+@media(min-width:600px) and (max-width:900px){
+  .skills-grid{grid-template-columns:1fr 1fr}
+  .cert-grid{grid-template-columns:1fr 1fr}
+  .proj-grid{grid-template-columns:1fr 1fr}
+  .hero-card{max-width:220px}
+  .about-stats{grid-template-columns:repeat(4,1fr)}
 }
 
 @media(min-width:901px){
@@ -522,14 +627,77 @@ footer span{color:var(--blue2)}
 @media(min-width:900px) and (max-width:1100px){
   .nav-status span:last-child{display:none}
   .nav-datetime{display:flex}
+  .hero-inner{grid-template-columns:1fr 280px;gap:2.5rem}
+  .skills-grid{grid-template-columns:1fr 1fr}
+  .proj-grid{grid-template-columns:1fr 1fr}
 }
 
+/* ── LARGE SCREENS (1400px+) ── */
+@media(min-width:1400px){
+  .wrapper{max-width:1300px}
+  .hero-title{font-size:4.5rem}
+  .skills-grid{grid-template-columns:repeat(3,1fr)}
+  .proj-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+/* ── SMALL MOBILE (max 480px) ── */
 @media(max-width:480px){
-  .hero-title{font-size:2rem}
+  .hero-title{font-size:1.9rem}
   .about-stats{grid-template-columns:1fr 1fr}
   nav{padding:0 1rem}
   .nav-drawer-bottom{flex-wrap:wrap;gap:.75rem}
   .nav-drawer-datetime-block{align-items:flex-start}
+  .hero-chips{gap:.4rem}
+  .hchip{font-size:.68rem;padding:.25rem .6rem}
+  .hero-actions{flex-direction:column;align-items:center}
+  .btn-ai{width:100%;justify-content:center}
+  .sk-card{padding:1.2rem}
+  .proj-body{padding:0 1rem 1rem}
+  .edu-card{padding:1rem}
+  .cert-card{padding:1rem}
+  .contact-form{padding:1.25rem}
+  .fab{width:40px;height:40px}
+  #scrollTop{width:32px;height:32px}
+  #musicBtn{width:32px;height:32px}
+  .astat-n{font-size:1.6rem}
+  /* Hero tag small mobile fix */
+  .hero-tag{
+    font-size:.62rem;
+    padding:.28rem .7rem;
+    border-radius:10px;
+    letter-spacing:.02em;
+  }
+}
+
+/* ── VERY SMALL (max 360px) ── */
+@media(max-width:360px){
+  .hero-title{font-size:1.65rem}
+  .nav-logo-text{display:none}
+  .hero-tag{font-size:.58rem}
+  .wrapper{padding:0 .75rem}
+}
+
+/* ── TOUCH DEVICES ── */
+@media(hover:none) and (pointer:coarse){
+  .btn-ai:hover{transform:none}
+  .proj-card:hover{transform:none}
+  .sk-card:hover{transform:none}
+  .citem:hover{transform:none}
+  .edu-card:hover{transform:none}
+  .cert-card:hover{transform:none}
+}
+
+/* ── PRINT ── */
+@media print{
+  #bg-canvas,nav,.fab-wrap,#scrollTop,#musicBtn,#welcomeModal,.nav-drawer{display:none!important}
+  body{background:#fff;color:#000}
+  section{padding:1rem 0}
+}
+
+/* ____Internship Highlight ___*/
+@keyframes chipShine{
+  0%{left:-100%}
+  100%{left:200%}
 }
 </style>
 </head>
@@ -546,6 +714,17 @@ footer span{color:var(--blue2)}
 </div>
 
 <canvas id="bg-canvas"></canvas>
+
+<!-- WELCOME MODAL -->
+<div id="welcomeModal" style="position:fixed;inset:0;background:rgba(2,8,23,.85);backdrop-filter:blur(8px);z-index:99998;display:flex;align-items:center;justify-content:center;padding:1rem;">
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:2.5rem;max-width:520px;width:100%;text-align:center;position:relative;">
+    <div style="width:68px;height:68px;border-radius:16px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:flex;align-items:center;justify-content:center;margin:0 auto 1.4rem;font-family:var(--font-mono);font-weight:700;font-size:1.7rem;color:#fff;">GK</div>
+    <div style="font-family:var(--font-mono);font-size:.75rem;color:var(--cyan);letter-spacing:.1em;margin-bottom:.6rem;">WELCOME</div>
+    <h2 style="font-size:1.6rem;font-weight:700;margin-bottom:.9rem;letter-spacing:-.02em;">Hey, I'm Gnanaprakash! 👋</h2>
+    <p style="font-size:.95rem;color:var(--text2);line-height:1.9;margin-bottom:1.8rem;">Welcome to my portfolio! I'm an AI & Data Science student passionate about Python automation and AIOps. Feel free to explore my work!</p>
+    <button onclick="document.getElementById('welcomeModal').style.display='none'" style="background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;border:none;border-radius:8px;padding:.85rem 2rem;font-size:1rem;font-weight:600;cursor:pointer;font-family:var(--font-body);width:100%;">Let's Go →</button>
+  </div>
+</div>
 
 <nav>
   <a href="#hero" class="nav-logo">
@@ -605,6 +784,15 @@ footer span{color:var(--blue2)}
   </div>
 </div>
 
+<!-- TICKER -->
+<div style="position:fixed;top:62px;left:0;right:0;z-index:998;background:rgba(245,158,11,.08);border-bottom:1px solid rgba(245,158,11,.3);padding:.45rem 0;font-family:var(--font-mono);backdrop-filter:blur(12px);">
+  <div style="overflow:hidden;position:relative;">
+    <div style="position:absolute;left:0;top:0;bottom:0;width:60px;background:linear-gradient(90deg,rgba(2,8,23,.9),transparent);z-index:2;pointer-events:none;"></div>
+    <div style="position:absolute;right:0;top:0;bottom:0;width:60px;background:linear-gradient(270deg,rgba(2,8,23,.9),transparent);z-index:2;pointer-events:none;"></div>
+    <div id="tickerTrack" style="display:flex;white-space:nowrap;will-change:transform;"></div>
+  </div>
+</div>
+
 <section id="hero">
   <div class="wrapper">
     <div class="hero-inner">
@@ -622,9 +810,13 @@ footer span{color:var(--blue2)}
           <span class="hchip blue">Python</span>
           <span class="hchip cyan">AIOps</span>
           <span class="hchip purple">Machine Learning</span>
-          <span class="hchip red">Currently Not Available - Doing Internship</span>
+          <span class="hchip red" style="position:relative;overflow:hidden;">
+          <span style="position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,100,100,0.4),rgba(255,200,0,0.3),transparent);animation:chipShine 2s linear infinite;"></span>
+            Currently Not Available - Doing Internship
+          </span>
           <span class="hchip blue">Data Science</span>
         </div>
+
         <div class="hero-actions">
           <a href="#projects" class="btn-ai primary">View Projects <i class="bi bi-arrow-right"></i></a>
           <a href="https://gnanaprakashg137.github.io/resume/" target="_blank" class="btn-ai ghost">Download Resume <i class="bi bi-download"></i></a>
@@ -678,9 +870,9 @@ footer span{color:var(--blue2)}
           <div class="info-block-label"><i class='bx bxs-graduation'></i> Degree</div>
           <div class="info-block-val">B.Tech Artificial Intelligence &amp; Data Science (2024–2028)</div>
         </div>
-        <div class="info-block">
+        <div class="info-block" style="text-decoration: none;">
           <div class="info-block-label"><i class="bi bi-envelope-at"></i> Email</div>
-          <div class="info-block-val"><a href="mailto:gnanaprakashg1312@gmail.com">gnanaprakashg1312@gmail.com</a></div>
+          <div class="info-block-val"><span class="__cf_email__" data-cfemail="2f48414e414e5f5d4e444e5c47481e1c1e1d6f48424e4643014c4042">gnanaprakashg1312@gmail.com</span></div>
         </div>
         <div class="info-block">
           <div class="info-block-label"><i class="bi bi-search"></i> Interests</div>
@@ -798,7 +990,7 @@ footer span{color:var(--blue2)}
           <div class="edu-meta">2024 — 2028</div>
           <div class="edu-meta">Current CGPA - 6.66</div>
         </div>
-        <span class="edu-badge active"><span class="nav-dot-blue" style="display:inline-block;margin-right:.4rem;vertical-align:middle"></span>Currently Pursuing</span>
+        <span class="edu-badge active"><span class="nav-dot" style="display:inline-block;margin-right:.4rem;vertical-align:middle"></span>Currently Pursuing</span>
       </div>
       <div class="edu-card reveal">
         <div class="edu-icon"><i class='bx bx-book-reader'></i></div>
@@ -849,7 +1041,7 @@ footer span{color:var(--blue2)}
         <div class="contact-items">
           <a href="mailto:gnanaprakashg1312@gmail.com" class="citem">
             <div class="citem-icon blue"><i class="bi bi-envelope-at"></i></div>
-            <div><span class="citem-label">Email</span><span class="citem-val">gnanaprakashg1312@gmail.com</span></div>
+            <div><span class="citem-label">Email</span><span class="citem-val"><span class="__cf_email__" data-cfemail="5e39303f303f2e2c3f353f2d36396f6d6f6c1e39333f3732703d3133">gnanaprakashg1312@gmail.com</span></span></div>
           </a>
           <a href="https://www.linkedin.com/in/gnanaprakash-g-869296331/" target="_blank" class="citem">
             <div class="citem-icon blue"><i class="bi bi-linkedin"></i></div>
@@ -903,7 +1095,17 @@ footer span{color:var(--blue2)}
   <i class="bi bi-chevron-double-up"></i>
 </div>
 
-<script>
+<!-- AUDIO -->
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- SPEAKER BUTTON -->
+<div id="musicBtn" title="Toggle Music" style="position:fixed;bottom:5.5rem;left:2rem;width:36px;height:36px;background:var(--card);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:500;transition:all .3s;">
+  <i class="bi bi-volume-mute-fill" id="musicIcon" style="font-size:1rem;color:var(--text3);"></i>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 window.addEventListener("load",()=>{
   setTimeout(()=>{
     const l=document.getElementById("loader");
@@ -1053,6 +1255,45 @@ document.getElementById("sendBtn").addEventListener("click",function(){
 document.addEventListener("contextmenu",e=>e.preventDefault());
 document.addEventListener("keydown",e=>{
   if(e.key==="F12"||(e.ctrlKey&&e.key.toLowerCase()==="u")||(e.ctrlKey&&e.shiftKey&&["i","j","c"].includes(e.key.toLowerCase())))e.preventDefault();
+});
+
+// TICKER JS
+(function(){
+  const track = document.getElementById("tickerTrack");
+  if(!track) return;
+  const html = '<span style="font-size:.78rem;color:var(--gold);padding:0 3rem;"> New project added </span><a href="#projects" style="font-size:.78rem;color:var(--cyan);text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:.3rem;padding:0 3rem;">Check it out <i class=\"bi bi-arrow-right\"></i></a>';
+  for(let i=0;i<10;i++) track.innerHTML += html;
+  let x=0, paused=false;
+  track.addEventListener("mouseenter",()=>paused=true);
+  track.addEventListener("mouseleave",()=>paused=false);
+  function animate(){
+    if(!paused){
+      x -= 0.6;
+      if(Math.abs(x) >= track.scrollWidth/2) x=0;
+      track.style.transform=`translateX(${x}px)`;
+    }
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
+
+// MUSIC TOGGLE
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+const musicIcon = document.getElementById("musicIcon");
+
+music.volume = 0.4;
+
+musicBtn.addEventListener("click", ()=>{
+  if(music.paused){
+    music.play();
+    musicIcon.className = "bi bi-volume-up-fill";
+    musicBtn.style.borderColor = "var(--blue)";
+  } else {
+    music.pause();
+    musicIcon.className = "bi bi-volume-mute-fill";
+    musicBtn.style.borderColor = "var(--border)";
+  }
 });
 </script>
 </body>
