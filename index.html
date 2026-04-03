@@ -1101,7 +1101,7 @@ footer span{color:var(--blue2)}
 </audio>
 
 <!-- SPEAKER BUTTON -->
-<div id="musicBtn" title="Toggle Music" style="position:fixed;bottom:5.5rem;left:2rem;width:36px;height:36px;background:var(--card);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:500;transition:all .3s;">
+<div id="musicBtn" title="Toggle Music" style="position:fixed;bottom:5.5rem;left:2rem;width:36px;height:36px;background:var(--card);border:1px solid var(--blue); box-shadow: 1px 0px 10px 1px var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:500;transition:all .3s;">
   <i class="bi bi-volume-mute-fill" id="musicIcon" style="font-size:1rem;color:var(--text3);"></i>
 </div>
 
@@ -1288,11 +1288,12 @@ musicBtn.addEventListener("click", ()=>{
   if(music.paused){
     music.play();
     musicIcon.className = "bi bi-volume-up-fill";
-    musicBtn.style.borderColor = "var(--blue)";
+    musicBtn.style.borderColor = "green";
+    musicBtn.style.boxShadow = "1px 0px 20px 1px green";
   } else {
     music.pause();
     musicIcon.className = "bi bi-volume-mute-fill";
-    musicBtn.style.borderColor = "var(--border)";
+    musicBtn.style.borderColor = "green";
   }
 });
 </script>
