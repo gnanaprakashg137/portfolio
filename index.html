@@ -441,6 +441,7 @@ section{padding:5rem 0}
 .proj-link:hover{color:var(--cyan)}
 .proj-status{font-size:.65rem;font-family:var(--font-mono);padding:.2rem .6rem;border-radius:4px}
 .proj-status.done{background:rgba(16,185,129,.1);color:var(--green);border:1px solid rgba(16,185,129,.2)}
+.proj-status.process{background:rgba(16,185,129,.1);color: red;border:1px solid rgba(16,185,129,.2)}
 .proj-status.wip{background:rgba(245,158,11,.1);color:var(--gold);border:1px solid rgba(245,158,11,.2)}
 
 #education{background:linear-gradient(180deg,var(--bg) 0%,var(--bg1) 100%)}
@@ -938,13 +939,14 @@ footer span{color:var(--blue2)}
     <div class="proj-grid">
       <div class="proj-card reveal">
         <div class="proj-top-bar"></div>
-        <div class="proj-num">// 01</div>
+        <div class="proj-num">// 03</div>
         <div class="proj-body">
           <div class="proj-title">AI Chatbot</div>
           <p class="proj-desc">Built a conversational AI chatbot using Python and basic NLP techniques to automate user interactions and handle common queries intelligently.</p>
           <div class="proj-tags"><span class="ptag">Python</span><span class="ptag">NLP</span><span class="ptag">Automation</span><span class="ptag">AI</span></div>
           <div class="proj-footer">
-            <span class="proj-status done">Completed</span>
+            <a href="https://gnanaprakashg137.github.io/AI-Chatbot/" target="_blank" class="proj-link">View on GitHub →</a>
+            <span class="proj-status process"><div class="nav-dot-red" style="display: inline-block;"> </div> In Processing...</span>
           </div>
         </div>
       </div>
@@ -956,18 +958,20 @@ footer span{color:var(--blue2)}
           <p class="proj-desc">Analyzed system log files using Python to detect errors, patterns, and recurring issues — inspired by AIOps monitoring and observability concepts.</p>
           <div class="proj-tags"><span class="ptag">Python</span><span class="ptag">AIOps</span><span class="ptag">Pandas</span><span class="ptag">Matplotlib</span></div>
           <div class="proj-footer">
+            <a href="https://github.com/gnanaprakashg137" target="_blank" class="proj-link">View on GitHub →</a>
             <span class="proj-status done">Completed</span>
           </div>
         </div>
       </div>
       <div class="proj-card reveal">
         <div class="proj-top-bar"></div>
-        <div class="proj-num">// 03</div>
+        <div class="proj-num">// 01</div>
         <div class="proj-body">
           <div class="proj-title">Personal Portfolio Website</div>
           <p class="proj-desc">A fully responsive AI-themed portfolio website built from scratch with dynamic animations, skill progress bars, and a modern dark UI.</p>
-          <div class="proj-tags"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JavaScript</span><span class="ptag">Canvas API</span></div>
+          <div class="proj-tags"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JavaScript</span><span class="ptag">Canvas API</span><span class="ptag">GitHub</span></div>
           <div class="proj-footer">
+            <a href="https://github.com/gnanaprakashg137" target="_blank" class="proj-link">View on GitHub →</a>
             <span class="proj-status done">Completed</span>
           </div>
         </div>
@@ -1261,7 +1265,7 @@ document.addEventListener("keydown",e=>{
 (function(){
   const track = document.getElementById("tickerTrack");
   if(!track) return;
-  const html = '<span style="font-size:.78rem;color:var(--gold);padding:0 3rem;"> New project added </span><a href="#projects" style="font-size:.78rem;color:var(--cyan);text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:.3rem;padding:0 3rem;">Check it out <i class=\"bi bi-arrow-right\"></i></a>';
+  const html = '<span style="font-size:.78rem;color:var(--gold);padding:0 3rem;"> New project in processing... </span><a href="#projects" style="font-size:.78rem;color:var(--cyan);text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:.3rem;padding:0 3rem;">Check it out <i class=\"bi bi-arrow-right\"></i></a>';
   for(let i=0;i<10;i++) track.innerHTML += html;
   let x=0, paused=false;
   track.addEventListener("mouseenter",()=>paused=true);
